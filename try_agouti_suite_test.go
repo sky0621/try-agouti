@@ -1,16 +1,16 @@
 package try_agouti_test
 
 import (
+	"testing"
+
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"github.com/sclevine/agouti"
-
-	"testing"
 )
 
-func TestTryAgouti(t *testing.T) {
+func TestPotato(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "TryAgouti Suite")
+	RunSpecs(t, "Potato Suite")
 }
 
 var agoutiDriver *agouti.WebDriver
@@ -18,8 +18,8 @@ var agoutiDriver *agouti.WebDriver
 var _ = BeforeSuite(func() {
 	// Choose a WebDriver:
 
-	// agoutiDriver = agouti.PhantomJS()
-	agoutiDriver = agouti.Selenium()
+	agoutiDriver = agouti.PhantomJS()
+	// agoutiDriver = agouti.Selenium()
 	// agoutiDriver = agouti.ChromeDriver()
 
 	Expect(agoutiDriver.Start()).To(Succeed())
